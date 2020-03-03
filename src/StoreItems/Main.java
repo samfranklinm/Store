@@ -47,8 +47,10 @@ public class Main {
 		//System.out.println("\n*****Ordering Inventory");// I am not sure what to print here
 		//Print all Ordering
 		
-		System.out.println("\n*****Taxes"); // I am not sure what to print here other than the below
-		Taxable.printTaxRates();
+		System.out.println("\n*****Taxes");// I am not sure what to print here other than the below (assigned random tax rates for items)
+		for(int i = 0; i < inventoryList.size(); i++) {
+			inventoryList.get(i).printTaxRates();
+		}
 		
 		
 		System.out.println("\n*****Expirations");

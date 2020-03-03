@@ -1,5 +1,6 @@
 package StoreItems;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public abstract class StoreItem implements Comparable<StoreItem>, Expiration, Taxable{
@@ -79,6 +80,18 @@ public abstract class StoreItem implements Comparable<StoreItem>, Expiration, Ta
 	public boolean doesExpire() { // Default is that an item does NOT expire.
 		return false;
 	}
+	
+	@Override
+	public double applyTax(){
+		
+	    DecimalFormat twoDecimalPlaces = new DecimalFormat("#.##");
+		double taxAmount = Double.valueOf(twoDecimalPlaces.format(taxRate * price));
+		double totalPrice =  price + taxAmount;
+		totalPrice = Double.valueOf(twoDecimalPlaces.format(totalPrice));
+		
+		return totalPrice;
+		
+	}
 
 
 	@Override
@@ -97,6 +110,11 @@ public abstract class StoreItem implements Comparable<StoreItem>, Expiration, Ta
 		if(compareResult == 0) {
 			return this.getFoodName().compareTo(otherItem.getFoodName());
 		}else return compareResult;
+	}
+	
+	@Override
+	public void printTaxRates() {
+		System.out.println("Tax rate for Store Items: " + (Taxable.taxRate * 1));
 	}
 	
 }

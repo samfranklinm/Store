@@ -1,6 +1,6 @@
 package StoreItems;
 
-public class Beverage extends StoreItem{
+public class Beverage extends StoreItem implements Taxable , Expiration{
 	
 	//Container Types
 	public static final Beverage ContainerType = null;
@@ -19,6 +19,7 @@ public class Beverage extends StoreItem{
 		super(foodName, brandName, price);		
 	}
 	
+	@Override
 	public boolean doesExpire() { // By default, yes, most beverages would expire
 		return true;
 	}
@@ -33,6 +34,11 @@ public class Beverage extends StoreItem{
 				+ "\nContainerType: " + containerType
 			    + "\n\n";
 		return label;
+	}
+
+	@Override
+	public void printTaxRates() {
+		System.out.println("Tax rate for " + foodName + ": " + (Taxable.taxRate * 2));
 	}
 	
 }

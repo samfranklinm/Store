@@ -8,13 +8,13 @@ public class Beer extends Beverage{
 	}
 	
 	@Override 
-	public boolean doesExpire() { // Does beer expire ? Yes, after a while
+	public boolean doesExpire() { // Does beer expire ? Yes, after a while.
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		String label ="Beer Name: " + foodName 
+		String label ="Beer Name: " + foodName
 				+ "\nBrand Name: " + brandName
 				+ "\nPrice: $" + price
 				+ "\nContainerType: " + containerType

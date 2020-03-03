@@ -1,7 +1,6 @@
 package StoreItems;
 
-interface Expiration {
+public interface Expiration {
 
-	 static boolean doesExpire() {
-		return false;}
+	 boolean doesExpire();
 }

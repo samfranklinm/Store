@@ -1,6 +1,6 @@
 package StoreItems;
 
-public class PersonalCareItem extends StoreItem {
+public class PersonalCareItem extends StoreItem implements Taxable, Expiration {
 
 	public PersonalCareItem(String foodName, String brandName, double price) {
 		super(foodName, brandName, price);
@@ -18,9 +18,15 @@ public class PersonalCareItem extends StoreItem {
 				+ "\nBrand Name: " + brandName
 				+ "\nPrice: $" + price
 				+ "\nTax Amount: $" + (Taxable.taxRate * price)
-				+ "\nTotal Price: $" + Taxable.applyTax(price)
+				+ "\nTotal Price: $" + applyTax()
 				+ "\n\n";
 		return label;
 }
+
+	@Override
+	public void printTaxRates() {
+		System.out.println("Tax rate for " + foodName + ": " + (Taxable.taxRate * 1.2));
+		
+	}
 
 }

@@ -1,6 +1,6 @@
 package StoreItems;
 
-public class PerishableFood extends StoreItem{
+public class PerishableFood extends StoreItem implements Taxable , Expiration{
 	
 	int weight;
 
@@ -20,6 +20,12 @@ public class PerishableFood extends StoreItem{
 	
 	public int getWeight() { //retrieve weight for the food
 		return weight;
+	}
+
+	@Override
+	public void printTaxRates() {
+		System.out.println("Tax rate for " + foodName + ": " + (Taxable.taxRate * 1.4));
+		
 	}
 	
 }

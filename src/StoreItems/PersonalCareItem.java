@@ -8,7 +8,7 @@ public class PersonalCareItem extends StoreItem {
 	}
 	
 	@Override 
-	public boolean doesExpire() {
+	public boolean doesExpire() { //Do Personal Care Items expire?
 		return true;
 	}
 	

@@ -8,7 +8,7 @@ public class Soda extends Beverage{
 	}
 	
 	@Override
-	public boolean doesExpire() {
+	public boolean doesExpire() { // Do Sodas expire? Yes, after a while
 		return true;
 	}
 	

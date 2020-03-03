@@ -10,15 +10,15 @@ public class PerishableFood extends StoreItem{
 	}
 	
 	@Override
-	public boolean doesExpire() {
+	public boolean doesExpire() { //Do perishable foods expire? Yep, they are perishable for a reason :)
 		return true;
 	}
 	
-	public void setWeight(int weight) {
+	public void setWeight(int weight) { //set weight for the food
 		this.weight = weight;
 	}
 	
-	public int getWeight() {
+	public int getWeight() { //retrieve weight for the food
 		return weight;
 	}
 	

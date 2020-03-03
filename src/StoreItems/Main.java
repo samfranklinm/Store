@@ -7,7 +7,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<StoreItem> inventoryList = new ArrayList<>();
+		ArrayList<StoreItem> inventoryList = new ArrayList<>(); // create an inventory list
+		
+		
+		//Add inventory items to the inventory
 		inventoryList.add(new PerishableFood("Macintosh Apple","Farmer Tom's", 2.99, 160));
 		inventoryList.add(new PerishableFood("Cheddar Cheese", "ByrneDiary", 5.99, 546));
 		inventoryList.add(new NonPerishableFood("Crackers", "Ritz", 1.99, 860));
@@ -27,15 +30,15 @@ public class Main {
 		inventoryList.add(new PersonalCareItem("Shampoo", "Paul Mitchell", 18.99));
 
 		
-		
+
 		System.out.println("\n*****Unsorted Inventory"); //Print all Unsorted Inventory
 		for(int i = 0; i < inventoryList.size(); i++) {
 			System.out.println(inventoryList.get(i).foodName);
 		}
 		
 		
-		System.out.println("\n*****Sorted Inventory");
-		//Print all Sorted Inventory
+		System.out.println("\n*****Sorted Inventory");//Print all Sorted Inventory 
+		
 		Collections.sort(inventoryList);
 		for(int i = 0; i < inventoryList.size(); i++) {
 			System.out.println(inventoryList.get(i).foodName);
@@ -44,7 +47,9 @@ public class Main {
 		//System.out.println("\n*****Ordering Inventory");// I am not sure what to print here
 		//Print all Ordering
 		
-		//System.out.println("\n*****Taxes"); // I am not sure what to print here
+		System.out.println("\n*****Taxes"); // I am not sure what to print here other than the below
+		Taxable.printTaxRates();
+		
 		
 		System.out.println("\n*****Expirations");
 			for(int i = 0; i < inventoryList.size(); i++) {

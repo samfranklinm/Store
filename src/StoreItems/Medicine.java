@@ -8,7 +8,7 @@ public class Medicine extends StoreItem {
 	}
 	
 	@Override
-	public boolean doesExpire() {
+	public boolean doesExpire() { //Do medicines expire?
 		return true;
 	}
 

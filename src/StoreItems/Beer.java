@@ -8,7 +8,7 @@ public class Beer extends Beverage{
 	}
 	
 	@Override 
-	public boolean doesExpire() {
+	public boolean doesExpire() { // Does beer expire ? Yes, after a while
 		return true;
 	}
 
